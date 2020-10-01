@@ -1,0 +1,16 @@
+EXE_INC = \
+    -I$(LIB_SRC)/finiteVolume/lnInclude \
+    -I$(LIB_SRC)/meshTools/lnInclude \
+	-I$(LIB_SRC)/OpenFOAM/lnInclude \
+	-I$(LIB_SRC)/mesh/blockMesh/lnInclude \  
+	-I$(FOAM_RUN)/../src/changingCellSet/lnInclude \
+	-I$(FOAM_RUN)/../src/IBMpointSet/lnInclude 
+
+EXE_LIBS = \
+	-L$(FOAM_USER_LIBBIN) \
+	-lIBMpointSet \
+    -lfiniteVolume \
+    -lmeshTools	\
+	-lblockMesh \
+	-lchangingCellSet \
+	-lOpenFOAM
